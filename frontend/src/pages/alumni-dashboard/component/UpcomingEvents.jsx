@@ -13,11 +13,11 @@ const UpcomingEvents = ({ events = [], loading = false, error = null, onRegister
     try {
       setRegisteringEvents(prev => new Set(prev).add(eventId));
       await alumniDashboardAPI.registerForEvent(eventId);
-      
+
       if (onRegister) {
         onRegister(eventId);
       }
-      
+
       alert('Successfully registered for the event!');
     } catch (error) {
       console.error('Failed to register for event:', error);

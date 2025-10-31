@@ -10,9 +10,15 @@ import StudentDashboard from "@/pages/student-dashboard/StudentDashboard";
 import LoginPortal from "./pages/login-portal/LoginPortal";
 import Homepage from "@/pages/homepage";
 import CreateEvent from "@/pages/events/CreateEvent";
+import Events from "@/pages/events/Events";
 import CreateMentorship from "@/pages/mentorships/CreateMentorship";
+import Mentorships from "@/pages/mentorships/Mentorships";
 import CreateAdmin from "@/pages/admin-dashboard/CreateAdmin";
 import Profile from "@/pages/profile/Profile";
+import Resources from "@/pages/resources/Resources";
+import CreateResource from "@/pages/resources/CreateResource";
+import Help from "@/pages/help/Help";
+import Settings from "@/pages/settings/Settings";
 
 const Routes = () => {
   return (
@@ -26,8 +32,14 @@ const Routes = () => {
           <Route path="/alumni-directory" element={<AlumniDirectory />} />
           <Route path="/alumni-dashboard" element={<AlumniDashboard />} />
           <Route path="/student-dashboard" element={<StudentDashboard />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/events/create" element={<CreateEvent />} />
+          <Route path="/mentorship" element={<Mentorships />} />
           <Route path="/mentorships/create" element={<CreateMentorship />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/create" element={<CreateResource />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="/admin/create" element={<CreateAdmin />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/login-portal" element={<LoginPortal />} />

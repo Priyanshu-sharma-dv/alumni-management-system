@@ -107,11 +107,11 @@ const DonationImpact = ({ donationData }) => {
       )}
       {/* Action Buttons */}
       <div className="flex items-center space-x-2">
-        <Button variant="default" className="flex-1">
+        <Button variant="default" className="flex-1" onClick={() => alert('Donation feature coming soon!')}>
           <Icon name="Heart" size={16} className="mr-2" />
           Donate Now
         </Button>
-        <Button variant="outline" size="sm">
+        <Button variant="outline" size="sm" onClick={() => alert('Share feature coming soon!')}>
           <Icon name="Share" size={16} />
         </Button>
       </div>

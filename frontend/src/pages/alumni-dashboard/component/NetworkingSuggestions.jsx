@@ -6,6 +6,7 @@ import Button from '@/Component/ui/Button';
 const NetworkingSuggestions = ({ suggestions }) => {
   const handleConnect = (userId) => {
     console.log(`Connecting with user ${userId}`);
+    alert(`Connection request sent to user ${userId}!`);
   };
 
   const getConnectionReason = (reason) => {

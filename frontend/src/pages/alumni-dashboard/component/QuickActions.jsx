@@ -19,18 +19,18 @@ const QuickActions = ({ onActionClick }) => {
       description: 'Discover new connections'
     },
     {
-      id: 'post-job',
-      label: 'Post Job',
-      icon: 'Briefcase',
-      color: 'bg-purple-500',
-      description: 'Share opportunities'
+      id: 'create-event',
+      label: 'Create Event',
+      icon: 'Calendar',
+      color: 'bg-orange-500',
+      description: 'Organize alumni events'
     },
     {
-      id: 'make-donation',
-      label: 'Make Donation',
-      icon: 'Heart',
-      color: 'bg-red-500',
-      description: 'Support your alma mater'
+      id: 'create-mentorship',
+      label: 'Create Mentorship',
+      icon: 'UserCheck',
+      color: 'bg-teal-500',
+      description: 'Offer mentorship opportunities'
     }
   ];
 

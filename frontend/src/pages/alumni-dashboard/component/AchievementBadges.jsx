@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '@/Component/AppIcon';
+import Button from '@/Component/ui/Button';
 
 const AchievementBadges = ({ achievements }) => {
   const getBadgeIcon = (type) => {
@@ -34,7 +35,9 @@ const AchievementBadges = ({ achievements }) => {
     <div className="bg-card rounded-xl border border-border p-6">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-lg font-semibold text-foreground">Achievement Badges</h2>
-        <Icon name="Award" size={20} className="text-accent" />
+        <Button variant="ghost" size="sm" onClick={() => alert('Achievement system coming soon!')}>
+          <Icon name="Award" size={20} className="text-accent" />
+        </Button>
       </div>
       {/* Earned Badges */}
       <div className="mb-6">

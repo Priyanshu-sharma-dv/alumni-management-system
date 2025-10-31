@@ -9,11 +9,14 @@ const MentorshipQueue = ({ requests, onRequestUpdate }) => {
     try {
       await alumniDashboardAPI.respondToMentorshipRequest(requestId, response);
       console.log(`Mentorship request ${requestId} ${response}ed`);
-      
+
       // Call the parent component to update the requests list
       if (onRequestUpdate) {
         onRequestUpdate(requestId, response);
       }
+
+      // Show success message
+      alert(`Mentorship request ${response}ed successfully!`);
     } catch (error) {
       console.error(`Failed to ${response} mentorship request:`, error);
       alert(`Failed to ${response} mentorship request. Please try again.`);
@@ -92,7 +95,7 @@ const MentorshipQueue = ({ requests, onRequestUpdate }) => {
                     >
                       Decline
                     </Button>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" onClick={() => window.location.href = `/profile/${request?.student?.id || ''}`}>
                       View Profile
                     </Button>
                   </div>

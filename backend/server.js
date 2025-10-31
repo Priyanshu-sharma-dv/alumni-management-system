@@ -11,6 +11,7 @@ const alumniRoutes = require('./routes/alumni');
 const studentRoutes = require('./routes/student');
 const eventsRoutes = require('./routes/events');
 const mentorshipsRoutes = require('./routes/mentorships');
+const resourcesRoutes = require('./routes/resources');
 const alumniDashboardRoutes = require('./routes/alumni-dashboard');
 
 const app = express();
@@ -35,6 +36,7 @@ app.use('/api/alumni', alumniRoutes);
 app.use('/api/student', studentRoutes);
 app.use('/api/events', eventsRoutes);
 app.use('/api/mentorships', mentorshipsRoutes);
+app.use('/api/resources', resourcesRoutes);
 app.use('/api/alumni-dashboard', alumniDashboardRoutes);
 
 // Root route

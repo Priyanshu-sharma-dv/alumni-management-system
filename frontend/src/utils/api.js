@@ -217,6 +217,146 @@ export const alumniDashboardAPI = {
   performQuickAction: async (actionId) => apiRequest('/api/alumni-dashboard/quick-action', { method: 'POST', body: JSON.stringify({ actionId }), headers: getAuthHeaders() }),
 };
 
+// Events API functions
+export const eventsAPI = {
+  /**
+   * Get all events
+   * @returns {Promise<Array>}
+   */
+  getAll: async () => {
+    return apiRequest('/api/events', {
+      method: 'GET',
+      headers: getAuthHeaders(),
+    });
+  },
+
+  /**
+   * Get event by ID
+   * @param {string} id
+   * @returns {Promise<object>}
+   */
+  getById: async (id) => {
+    return apiRequest(`/api/events/${id}`, {
+      method: 'GET',
+      headers: getAuthHeaders(),
+    });
+  },
+
+  /**
+   * Register for an event
+   * @param {string} id
+   * @returns {Promise<object>}
+   */
+  register: async (id) => {
+    return apiRequest(`/api/events/${id}/register`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+    });
+  },
+};
+
+// Mentorship API functions
+export const mentorshipAPI = {
+  /**
+   * Get all mentorships
+   * @returns {Promise<Array>}
+   */
+  getAll: async () => {
+    return apiRequest('/api/mentorships', {
+      method: 'GET',
+      headers: getAuthHeaders(),
+    });
+  },
+
+  /**
+   * Get mentorship by ID
+   * @param {string} id
+   * @returns {Promise<object>}
+   */
+  getById: async (id) => {
+    return apiRequest(`/api/mentorships/${id}`, {
+      method: 'GET',
+      headers: getAuthHeaders(),
+    });
+  },
+
+  /**
+   * Connect to a mentorship
+   * @param {string} id
+   * @returns {Promise<object>}
+   */
+  connect: async (id) => {
+    return apiRequest(`/api/mentorships/${id}/connect`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+    });
+  },
+};
+
+/**
+ * Resources API functions
+ */
+export const resourcesAPI = {
+  /**
+   * Get all resources
+   * @returns {Promise<Array>}
+   */
+  getAll: async () => {
+    return apiRequest('/api/resources', {
+      method: 'GET',
+      headers: getAuthHeaders(),
+    });
+  },
+
+  /**
+   * Get resource by ID
+   * @param {string} id
+   * @returns {Promise<object>}
+   */
+  getById: async (id) => {
+    return apiRequest(`/api/resources/${id}`, {
+      method: 'GET',
+      headers: getAuthHeaders(),
+    });
+  },
+
+  /**
+   * Create a new resource
+   * @param {FormData} formData
+   * @returns {Promise<object>}
+   */
+  create: async (formData) => {
+    return apiRequest('/api/resources', {
+      method: 'POST',
+      body: formData,
+    });
+  },
+
+  /**
+   * Download a resource
+   * @param {string} id
+   * @returns {Promise<Blob>}
+   */
+  download: async (id) => {
+    return apiRequest(`/api/resources/${id}/download`, {
+      method: 'GET',
+      headers: getAuthHeaders(),
+    });
+  },
+
+  /**
+   * Bookmark a resource
+   * @param {string} id
+   * @returns {Promise<object>}
+   */
+  bookmark: async (id) => {
+    return apiRequest(`/api/resources/${id}/bookmark`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+    });
+  },
+};
+
 /**
  * Generic API helper
  */

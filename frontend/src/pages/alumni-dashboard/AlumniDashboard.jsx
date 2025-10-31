@@ -106,7 +106,7 @@ const AlumniDashboard = () => {
     const handleQuickAction = async (actionId) => {
         try {
             await alumniDashboardAPI.performQuickAction(actionId);
-            
+
             switch (actionId) {
                 case 'update-profile':
                     window.location.href = '/profile';
@@ -114,13 +114,11 @@ const AlumniDashboard = () => {
                 case 'find-alumni':
                     window.location.href = '/alumni-directory';
                     break;
-                case 'post-job':
-                    // Could open a modal or redirect to job posting page
-                    alert('Job posting feature coming soon!');
+                case 'create-event':
+                    window.location.href = '/events/create';
                     break;
-                case 'make-donation':
-                    // Could open a modal or redirect to donation page
-                    alert('Donation feature coming soon!');
+                case 'create-mentorship':
+                    window.location.href = '/mentorships/create';
                     break;
                 default:
                     console.log(`Quick action performed: ${actionId}`);
